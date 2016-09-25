@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" ui-sref="main">Shama Admin</a>
+        <a class="navbar-brand" ui-sref="chats.list">Shama Admin</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -17,7 +17,7 @@
         </a>
         <ul class="dropdown-menu dropdown-messages" uib-dropdown-menu aria-labelledby="user-messages">
           <li ng-repeat-start="message in messages">
-            <a ui-sref="messages">
+            <a ui-sref="private-messages.list">
               <div>
                   <strong>{{ message.user }}</strong>
                   <span class="pull-right text-muted">
@@ -58,22 +58,22 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
-                    <a ui-sref="chats"><i class="fa fa-comments fa-fw"></i> Chats</a>
+                    <a ui-sref="chats.list" ui-sref-active="active"><i class="fa fa-comments fa-fw"></i> Chats</a>
                 </li>
                 <li>
-                    <a ui-sref="surveys"><i class="fa fa-edit fa-fw"></i> Encuestas</a>
+                    <a ui-sref="surveys.list" ui-sref-active="active"><i class="fa fa-edit fa-fw"></i> Encuestas</a>
                 </li>
                 <li>
-                    <a ui-sref="messages"><i class="fa fa-envelope-o fa-fw"></i> Mensajes privados</a>
+                    <a ui-sref="private-messages.list" ui-sref-active="active"><i class="fa fa-envelope-o fa-fw"></i> Mensajes privados</a>
                 </li>
                 <li>
-                    <a ui-sref="team"><i class="fa fa-user fa-fw"></i> Equipo</a>
+                    <a ui-sref="team.list" ui-sref-active="active"><i class="fa fa-user fa-fw"></i> Equipo</a>
                 </li>
                 <li>
-                    <a ui-sref="users"><i class="fa fa-users fa-fw"></i> Usuarios</a>
+                    <a ui-sref="users.list" ui-sref-active="active"><i class="fa fa-users fa-fw"></i> Usuarios</a>
                 </li>
                 <li>
-                    <a ui-sref="reports"><i class="fa fa-exclamation-triangle fa-fw"></i> Reportes de post</a>
+                    <a ui-sref="reports.list" ui-sref-active="active"><i class="fa fa-exclamation-triangle fa-fw"></i> Reportes de post</a>
                 </li>
             </ul>
         </div>
