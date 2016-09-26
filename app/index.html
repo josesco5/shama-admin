@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="shamaAdminApp">
   <head>
     <meta charset="utf-8">
     <title>Shama Admin</title>
@@ -17,16 +17,17 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- endbuild -->
   </head>
-  <body ng-app="shamaAdminApp">
+  <body ng-controller="MainCtrl">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Navigation -->
     <ng-include src="'/views/layout/navigation.html'"
+                ng-show="loggedIn()"
                 ng-controller="NavigationCtrl"></ng-include>
 
-    <div id="page-wrapper">
+    <div id="page-wrapper" ng-class="{'wide-page': !loggedIn()}">
       <div ui-view=""></div>
     </div>
 
@@ -62,12 +63,15 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/layout/navigation.js"></script>
+        <script src="scripts/controllers/auth/auth.js"></script>
         <script src="scripts/controllers/chats/list.js"></script>
         <script src="scripts/controllers/surveys/list.js"></script>
         <script src="scripts/controllers/private-messages/list.js"></script>
         <script src="scripts/controllers/team/list.js"></script>
         <script src="scripts/controllers/users/list.js"></script>
         <script src="scripts/controllers/reports/list.js"></script>
+
+        <script src="scripts/services/auth.js"></script>
         <!-- endbuild -->
 </body>
 </html>

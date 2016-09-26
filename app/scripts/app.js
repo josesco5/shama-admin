@@ -27,6 +27,11 @@ angular
     $urlRouterProvider.otherwise('/chats');
 
     $stateProvider
+      .state('login', {
+        url: '/login',
+        templateUrl: 'views/auth/login.html',
+        controller: 'AuthCtrl'
+      })
       .state('chats', {
         abstract: true,
         url: '/chats',
