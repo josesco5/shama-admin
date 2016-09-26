@@ -18,7 +18,8 @@ angular
 
     // Third dependencies
     'ui.bootstrap',
-    'ui.router'
+    'ui.router',
+    'LocalStorageModule'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
@@ -86,4 +87,8 @@ angular
         templateUrl: 'views/reports/list.html',
         controller: 'ReportsListCtrl'
       });
+  })
+  .config(function (localStorageServiceProvider) {
+    localStorageServiceProvider
+      .setPrefix('shamaAdminApp');
   });
