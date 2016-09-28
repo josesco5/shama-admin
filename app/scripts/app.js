@@ -19,7 +19,8 @@ angular
     // Third dependencies
     'ui.bootstrap',
     'ui.router',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'restangular'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
