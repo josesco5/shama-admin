@@ -20,7 +20,9 @@ angular
     'ui.bootstrap',
     'ui.router',
     'LocalStorageModule',
-    'restangular'
+    'restangular',
+    'datatables',
+    'datatables.bootstrap'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
