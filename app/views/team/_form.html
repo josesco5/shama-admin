@@ -1,0 +1,114 @@
+<form role="form" class="form-horizontal" name="formHolder.teamForm" ng-submit="submitForm()" novalidate>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">Nombre</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" name="name" ng-model="user.name" required>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">Apellido</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" name="lastname" ng-model="user.lastname" required>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">Sexo</label>
+        <div class="col-sm-9">
+          <select class="form-control" name="gender" ng-model="user.gender" required>
+            <option value="">-- Elija una opción --</option>
+            <option value="female">Femenino</option>
+            <option value="male">Masculino</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">C.I.</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="number" name="identityCard" ng-model="user.identityCard" required>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">Role</label>
+        <div class="col-sm-9">
+          <select class="form-control" name="role" ng-model="user.role" required>
+            <option value="">-- Elija una opción --</option>
+            <option value="supervisor">Supervisor</option>
+            <option value="expert">Facilitador</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">Email</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="email" name="email" ng-model="user.email" required>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">Carrera</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" name="career" ng-model="user.career" required>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">Especialidad</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" name="specialty" ng-model="user.specialty" required>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">Comentarios</label>
+        <div class="col-sm-9">
+          <textarea class="form-control" rows="4" name="comments" ng-model="user.comments"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3">Habilitado</label>
+        <div class="col-sm-9">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="enabled" ng-model="user.enabled">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-9 col-sm-offset-3 col-md-2 col-md-offset-10">
+      <input class="btn btn-success btn-block" ng-disabled="!canSubmitForm()" type="submit" value="Guardar">
+    </div>
+  </div>
+</form>

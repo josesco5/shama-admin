@@ -27,5 +27,12 @@ angular.module('shamaAdminApp')
       return ShamaRestangular.all('users').getList(params, headers);
     };
 
+    users.create = function (user) {
+      var headers = {
+        authorization: auth.getToken()
+      };
+      return ShamaRestangular.all('users').post(user, null, headers);
+    };
+
     return users;
   });

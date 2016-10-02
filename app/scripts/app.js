@@ -75,6 +75,11 @@ angular
         templateUrl: 'views/team/list.html',
         controller: 'TeamListCtrl'
       })
+      .state('team.create', {
+        url: '/new',
+        templateUrl: 'views/team/create.html',
+        controller: 'TeamCreateCtrl'
+      })
       .state('users', {
         abstract: true,
         url: '/users',
