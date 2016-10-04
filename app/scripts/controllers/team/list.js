@@ -23,6 +23,17 @@ angular.module('shamaAdminApp')
         DTColumnDefBuilder.newColumnDef(3).notSortable()
     ];
 
+    $scope.enable = function (userId, enabled) {
+      users.enable(userId, enabled)
+        .then(function (response) {
+          // ToDo: Display success message
+          console.log(response);
+        }, function (response) {
+          // ToDo: Display error message
+          console.log('Error trying to enable/disable the user, with status: ' + response.status);
+        });
+    };
+
     users.all('team')
       .then(function (response) {
         $scope.team = response.data;
