@@ -21,7 +21,11 @@
           </thead>
           <tbody>
             <tr ng-repeat="user in team">
-              <td>{{ user.name }} {{ user.lastname }}</td>
+              <td>
+                <a ui-sref="team.detail({userId: user._id})">
+                  {{ user.name }} {{ user.lastname }}
+                </a>
+              </td>
               <td>{{ user.role }}</td>
               <td>{{ user.createdAt }}</td>
               <td>

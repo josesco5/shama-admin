@@ -34,6 +34,13 @@ angular.module('shamaAdminApp')
       return ShamaRestangular.all('users').post(user, null, headers);
     };
 
+    users.get = function (userId) {
+      var headers = {
+        authorization: auth.getToken()
+      };
+      return ShamaRestangular.one('users', userId).get(null, headers);
+    };
+
     users.enable = function (userId, enabled) {
       var headers = {
         authorization: auth.getToken()

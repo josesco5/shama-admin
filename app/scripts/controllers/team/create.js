@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name shamaAdminApp.controller:TeamEditCtrl
+ * @name shamaAdminApp.controller:TeamCreateCtrl
  * @description
- * # TeamEditCtrl
+ * # TeamCreateCtrl
  * Controller of the shamaAdminApp
  */
 angular.module('shamaAdminApp')

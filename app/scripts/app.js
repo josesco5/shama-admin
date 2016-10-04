@@ -80,6 +80,11 @@ angular
         templateUrl: 'views/team/create.html',
         controller: 'TeamCreateCtrl'
       })
+      .state('team.detail', {
+        url: '/:userId',
+        templateUrl: 'views/team/detail.html',
+        controller: 'TeamDetailCtrl'
+      })
       .state('users', {
         abstract: true,
         url: '/users',

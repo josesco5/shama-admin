@@ -1,0 +1,113 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default form-container">
+      <div class="panel-heading">
+        Información básica
+      </div>
+      <div class="panel-body">
+        <div class="form-horizontal">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">Nombre</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.name }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">Apellido</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.lastname }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">Sexo</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.gender }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">C.I.</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.identityCard }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">Rol</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.role }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">Email</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.email }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">Carrera</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.career }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">Especialidad</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.specialty }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">Comentarios</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.comments }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3">Habilitado</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.enabled }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-9 col-sm-offset-3 col-md-2 col-md-offset-10">
+              <a ui-sref="team.edit({userId: user._id})" class="btn btn-primary btn-block">Modificar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
