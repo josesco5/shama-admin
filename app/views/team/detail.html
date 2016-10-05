@@ -1,15 +1,15 @@
 <div class="row">
   <div class="col-lg-12">
     <div class="panel panel-default form-container">
-      <div class="panel-heading">
-        Información básica
+      <div class="panel-heading" translate>
+        TEAM.LABELS.BASIC_DATA
       </div>
       <div class="panel-body">
         <div class="form-horizontal">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">Nombre</label>
+                <label class="control-label col-sm-3" translate>TEAM.LABELS.NAME</label>
                 <div class="col-sm-9">
                   <p class="form-control-static">{{ user.name }}</p>
                 </div>
@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">Apellido</label>
+                <label class="control-label col-sm-3" translate>TEAM.LABELS.LASTNAME</label>
                 <div class="col-sm-9">
                   <p class="form-control-static">{{ user.lastname }}</p>
                 </div>
@@ -28,15 +28,15 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">Sexo</label>
+                <label class="control-label col-sm-3" translate>TEAM.LABELS.GENDER</label>
                 <div class="col-sm-9">
-                  <p class="form-control-static">{{ user.gender }}</p>
+                  <p class="form-control-static">{{ user.gender | translate }}</p>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">C.I.</label>
+                <label class="control-label col-sm-3" translate>TEAM.LABELS.IDENTITY_CARD</label>
                 <div class="col-sm-9">
                   <p class="form-control-static">{{ user.identityCard }}</p>
                 </div>
@@ -47,15 +47,15 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">Rol</label>
+                <label class="control-label col-sm-3" translate>TEAM.LABELS.ROLE</label>
                 <div class="col-sm-9">
-                  <p class="form-control-static">{{ user.role }}</p>
+                  <p class="form-control-static">{{ user.role | translate }}</p>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">Email</label>
+                <label class="control-label col-sm-3" translate>TEAM.LABELS.EMAIL</label>
                 <div class="col-sm-9">
                   <p class="form-control-static">{{ user.email }}</p>
                 </div>
@@ -66,7 +66,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">Carrera</label>
+                <label class="control-label col-sm-3" translate>TEAM.LABELS.CAREER</label>
                 <div class="col-sm-9">
                   <p class="form-control-static">{{ user.career }}</p>
                 </div>
@@ -74,7 +74,7 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">Especialidad</label>
+                <label class="control-label col-sm-3" translate>TEAM.LABELS.SPECIALTY</label>
                 <div class="col-sm-9">
                   <p class="form-control-static">{{ user.specialty }}</p>
                 </div>
@@ -85,7 +85,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">Comentarios</label>
+                <label class="control-label col-sm-3" translate>TEAM.LABELS.COMMENTS</label>
                 <div class="col-sm-9">
                   <p class="form-control-static">{{ user.comments }}</p>
                 </div>
@@ -93,9 +93,10 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label col-sm-3">Habilitado</label>
+                <label class="control-label col-sm-3" translate>COMMON.LABELS.STATUS</label>
                 <div class="col-sm-9">
-                  <p class="form-control-static">{{ user.enabled }}</p>
+                  <p class="form-control-static" ng-show="user.enabled" translate>COMMON.LABELS.ENABLED</p>
+                  <p class="form-control-static" ng-show="!user.enabled" translate>COMMON.LABELS.DISABLED</p>
                 </div>
               </div>
             </div>
@@ -103,7 +104,7 @@
 
           <div class="row">
             <div class="col-sm-9 col-sm-offset-3 col-md-2 col-md-offset-10">
-              <a ui-sref="team.edit({userId: user._id})" class="btn btn-primary btn-block">Modificar</a>
+              <a ui-sref="team.edit({userId: user._id})" class="btn btn-primary btn-block" translate>COMMON.BUTTONS.EDIT</a>
             </div>
           </div>
         </div>

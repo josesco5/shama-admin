@@ -1,16 +1,20 @@
 {
   "COMMON": {
     "LABELS": {
-      "ENABLED": "Habilitado"
+      "STATUS": "Estatus",
+      "ENABLED": "Habilitado",
+      "DISABLED": "Deshabilitado"
     },
     "BUTTONS": {
-      "SAVE": "Guardar"
+      "SAVE": "Guardar",
+      "EDIT": "Modificar"
     }
   },
 
   "TEAM": {
     "LABELS": {
       "ADD_MEMBER": "Agregar miembro al equipo",
+      "BASIC_DATA": "Información básica",
       "NAME": "Nombre",
       "LASTNAME": "Apellido",
       "GENDER": "Sexo",
@@ -28,5 +32,10 @@
       "SUPERVISOR": "Supervisor",
       "EXPERT": "Facilitador"
     }
-  }
+  },
+
+  "male": "Masculino",
+  "female": "Femenino",
+  "supervisor": "Supervisor",
+  "expert": "Facilitador"
 }
