@@ -1,1 +1,32 @@
-{}
+{
+  "COMMON": {
+    "LABELS": {
+      "ENABLED": "Habilitado"
+    },
+    "BUTTONS": {
+      "SAVE": "Guardar"
+    }
+  },
+
+  "TEAM": {
+    "LABELS": {
+      "ADD_MEMBER": "Agregar miembro al equipo",
+      "NAME": "Nombre",
+      "LASTNAME": "Apellido",
+      "GENDER": "Sexo",
+      "IDENTITY_CARD": "C.I.",
+      "ROLE": "Rol",
+      "EMAIL": "Correo",
+      "CAREER": "Carrera",
+      "SPECIALTY": "Especialidad",
+      "COMMENTS": "Comentarios"
+    },
+    "VALUES": {
+      "SELECT_OPTION": "-- Elija una opción --",
+      "MALE": "Masculino",
+      "FEMALE": "Femenino",
+      "SUPERVISOR": "Supervisor",
+      "EXPERT": "Facilitador"
+    }
+  }
+}

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">Nombre</label>
+        <label class="control-label col-sm-3" translate>TEAM.LABELS.NAME</label>
         <div class="col-sm-9">
           <input class="form-control" type="text" name="name" ng-model="user.name" required>
         </div>
@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">Apellido</label>
+        <label class="control-label col-sm-3" translate>TEAM.LABELS.LASTNAME</label>
         <div class="col-sm-9">
           <input class="form-control" type="text" name="lastname" ng-model="user.lastname" required>
         </div>
@@ -21,19 +21,19 @@
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">Sexo</label>
+        <label class="control-label col-sm-3" translate>TEAM.LABELS.GENDER</label>
         <div class="col-sm-9">
           <select class="form-control" name="gender" ng-model="user.gender" required>
-            <option value="">-- Elija una opción --</option>
-            <option value="female">Femenino</option>
-            <option value="male">Masculino</option>
+            <option value="" translate>TEAM.VALUES.SELECT_OPTION</option>
+            <option value="female" translate>TEAM.VALUES.FEMALE</option>
+            <option value="male" translate>TEAM.VALUES.MALE</option>
           </select>
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">C.I.</label>
+        <label class="control-label col-sm-3" translate>TEAM.LABELS.IDENTITY_CARD</label>
         <div class="col-sm-9">
           <input class="form-control" type="number" name="identityCard" ng-model="user.identityCard" required>
         </div>
@@ -44,19 +44,19 @@
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">Role</label>
+        <label class="control-label col-sm-3" translate>TEAM.LABELS.ROLE</label>
         <div class="col-sm-9">
           <select class="form-control" name="role" ng-model="user.role" required>
-            <option value="">-- Elija una opción --</option>
-            <option value="supervisor">Supervisor</option>
-            <option value="expert">Facilitador</option>
+            <option value="" translate>TEAM.VALUES.SELECT_OPTION</option>
+            <option value="supervisor" translate>TEAM.VALUES.SUPERVISOR</option>
+            <option value="expert" translate>TEAM.VALUES.EXPERT</option>
           </select>
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">Email</label>
+        <label class="control-label col-sm-3" translate>TEAM.LABELS.EMAIL</label>
         <div class="col-sm-9">
           <input class="form-control" type="email" name="email" ng-model="user.email" required>
         </div>
@@ -67,7 +67,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">Carrera</label>
+        <label class="control-label col-sm-3" translate>TEAM.LABELS.CAREER</label>
         <div class="col-sm-9">
           <input class="form-control" type="text" name="career" ng-model="user.career" required>
         </div>
@@ -75,7 +75,7 @@
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">Especialidad</label>
+        <label class="control-label col-sm-3" translate>TEAM.LABELS.SPECIALTY</label>
         <div class="col-sm-9">
           <input class="form-control" type="text" name="specialty" ng-model="user.specialty" required>
         </div>
@@ -86,7 +86,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">Comentarios</label>
+        <label class="control-label col-sm-3" translate>TEAM.LABELS.COMMENTS</label>
         <div class="col-sm-9">
           <textarea class="form-control" rows="4" name="comments" ng-model="user.comments"></textarea>
         </div>
@@ -94,7 +94,7 @@
     </div>
     <div class="col-md-6">
       <div class="form-group">
-        <label class="control-label col-sm-3">Habilitado</label>
+        <label class="control-label col-sm-3" translate>COMMON.LABELS.ENABLED</label>
         <div class="col-sm-9">
           <div class="checkbox">
             <label>
@@ -108,7 +108,7 @@
 
   <div class="row">
     <div class="col-sm-9 col-sm-offset-3 col-md-2 col-md-offset-10">
-      <input class="btn btn-success btn-block" ng-disabled="!canSubmitForm()" type="submit" value="Guardar">
+      <input class="btn btn-success btn-block" ng-disabled="!canSubmitForm()" type="submit" value="{{ 'COMMON.BUTTONS.SAVE' | translate }}">
     </div>
   </div>
 </form>
