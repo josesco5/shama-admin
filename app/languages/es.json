@@ -1,18 +1,21 @@
 {
   "COMMON": {
     "LABELS": {
+      "DATE": "Fecha",
       "STATUS": "Estatus",
       "ENABLED": "Habilitado",
       "DISABLED": "Deshabilitado"
     },
     "BUTTONS": {
       "SAVE": "Guardar",
+      "ADD": "Agregar",
       "EDIT": "Modificar"
     }
   },
 
   "TEAM": {
     "LABELS": {
+      "HEADER": "Equipo",
       "ADD_MEMBER": "Agregar miembro al equipo",
       "BASIC_DATA": "Información básica",
       "NAME": "Nombre",
@@ -20,6 +23,7 @@
       "GENDER": "Sexo",
       "IDENTITY_CARD": "C.I.",
       "ROLE": "Rol",
+      "CHARGE": "Cargo",
       "EMAIL": "Correo",
       "CAREER": "Carrera",
       "SPECIALTY": "Especialidad",
