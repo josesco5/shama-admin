@@ -22,7 +22,8 @@ angular
     'LocalStorageModule',
     'restangular',
     'datatables',
-    'datatables.bootstrap'
+    'datatables.bootstrap',
+    'pascalprecht.translate'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
@@ -109,4 +110,14 @@ angular
   .config(function (localStorageServiceProvider) {
     localStorageServiceProvider
       .setPrefix('shamaAdminApp');
+  })
+  .config(function ($translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+      prefix: '/languages/',
+      suffix: '.json'
+    });
+
+    $translateProvider.preferredLanguage('es');
+
+    $translateProvider.useSanitizeValueStrategy('escapeParameters');
   });
