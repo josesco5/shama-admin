@@ -70,6 +70,16 @@ body {
   margin-top: 20px;
 }
 
+/* Flash messages */
+.flash-messages {
+  min-width: 250px;
+  max-width: 450px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 5px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 

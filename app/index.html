@@ -28,9 +28,13 @@
                 ng-show="loggedIn()"
                 ng-controller="NavigationCtrl"></ng-include>
 
+    <!-- Page content -->
     <div id="page-wrapper" ng-class="{'wide-page': !loggedIn()}">
       <div ui-view=""></div>
     </div>
+
+    <!-- Flash Messages -->
+    <ng-include src="'/views/layout/flash_messages.html'"></ng-include>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -93,6 +97,7 @@
 
         <script src="scripts/services/auth.js"></script>
         <script src="scripts/services/restangular.js"></script>
+        <script src="scripts/services/flash.js"></script>
         <script src="scripts/services/users.js"></script>
         <!-- endbuild -->
 </body>

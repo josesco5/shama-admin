@@ -1,0 +1,8 @@
+<div class="flash-messages">
+  <div uib-alert ng-repeat="message in flashMessages" 
+       ng-class="'alert-' + (message.type || 'warning')"
+       dismiss-on-timeout="4000"
+       close="closeFlashMessage($index)">
+        {{ message.text }}
+  </div>
+</div>
