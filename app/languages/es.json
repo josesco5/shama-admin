@@ -13,6 +13,22 @@
     }
   },
 
+  "AUTH": {
+    "LABELS": {
+      "LOGIN": "Por favor inicie sesión",
+      "EMAIL": "Correo electrónico",
+      "PASSWORD": "Contraseña"
+    },
+    "BUTTONS": {
+      "LOGIN": "Acceder"
+    },
+    "MESSAGES": {
+      "LOGIN_SUCCESS": "Se ha iniciado sesión exitosamente",
+      "LOGIN_ERROR": "Ocurrió un error al iniciar sesión. Intente nuevamente",
+      "LOGIN_UNAUTHORIZED_ERROR": "El correo o la contraseña son incorrectos. Intente nuevamente"
+    }
+  },
+
   "TEAM": {
     "LABELS": {
       "HEADER": "Equipo",
