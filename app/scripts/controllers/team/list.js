@@ -8,7 +8,7 @@
  * Controller of the shamaAdminApp
  */
 angular.module('shamaAdminApp')
-  .controller('TeamListCtrl', function ($scope, users, DTOptionsBuilder, DTColumnDefBuilder) {
+  .controller('TeamListCtrl', function ($scope, $translate, flash, users, DTOptionsBuilder, DTColumnDefBuilder) {
     $scope.team = [];
 
     $scope.dtOptions = DTOptionsBuilder.newOptions()
@@ -26,16 +26,24 @@ angular.module('shamaAdminApp')
     $scope.enable = function (userId, enabled) {
       users.enable(userId, enabled)
         .then(function (response) {
-          // ToDo: Display success message
-          console.log(response);
+          $translate('TEAM.MESSAGES.EDIT_MEMBER_SUCCESS').then(function (msg) {
+            flash.showSuccess(msg);
+          });
         }, function (response) {
-          // ToDo: Display error message
           console.log('Error trying to enable/disable the user, with status: ' + response.status);
+          $translate('TEAM.MESSAGES.EDIT_MEMBER_ERROR').then(function (msg) {
+            flash.showError(msg);
+          });
         });
     };
 
     users.all('team')
       .then(function (response) {
         $scope.team = response.data;
+      }, function (response) {
+        console.log('Error getting the members list, with status: ' + response.status);
+        $translate('TEAM.MESSAGES.LIST_MEMBERS_ERROR').then(function (msg) {
+          flash.showError(msg);
+        });
       });
   });

@@ -78,6 +78,7 @@ body {
   bottom: 0;
   right: 0;
   margin: 5px;
+  z-index: 5;
 }
 
 /* Responsive: Portrait tablets and up */

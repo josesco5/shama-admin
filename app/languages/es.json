@@ -51,6 +51,13 @@
       "FEMALE": "Femenino",
       "SUPERVISOR": "Supervisor",
       "EXPERT": "Facilitador"
+    },
+    "MESSAGES": {
+      "LIST_MEMBERS_ERROR": "Ocurrió un error obteniendo la lista del equipo",
+      "ADD_MEMBER_SUCCESS": "El usuario se ha creado exitosamente",
+      "ADD_MEMBER_ERROR": "Ocurrió un error al crear el usuario",
+      "EDIT_MEMBER_SUCCESS": "El usuario se ha modificado exitosamente",
+      "EDIT_MEMBER_ERROR": "Ocurrió un error al modificar el usuario"
     }
   },
 

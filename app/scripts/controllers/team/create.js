@@ -8,7 +8,7 @@
  * Controller of the shamaAdminApp
  */
 angular.module('shamaAdminApp')
-  .controller('TeamCreateCtrl', function ($scope, $state, users) {
+  .controller('TeamCreateCtrl', function ($scope, $state, $translate, flash, users) {
     $scope.user = {
       enabled: false
     };
@@ -23,14 +23,15 @@ angular.module('shamaAdminApp')
       console.log($scope.user);
       users.create($scope.user)
         .then(function (response) {
-          // ToDo: Display success message
-          // ToDo: Display user detail view
-          console.log(response.data);
-          $state.go('team.list');
+          $translate('TEAM.MESSAGES.ADD_MEMBER_SUCCESS').then(function (msg) {
+            flash.showSuccess(msg);
+          });
+          $state.go('team.detail', { userId: response.data._id });
         }, function (response) {
-          // ToDo: Display error message
           console.log('Error creating user with status: ' + response.status);
-          console.log(response.data);
+          $translate('TEAM.MESSAGES.ADD_MEMBER_ERROR').then(function (msg) {
+            flash.showError(msg);
+          });
         });
     };
   });
