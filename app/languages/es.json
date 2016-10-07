@@ -55,6 +55,7 @@
     },
     "MESSAGES": {
       "LIST_MEMBERS_ERROR": "Ocurrió un error obteniendo la lista del equipo",
+      "GET_MEMBER_ERROR": "Ocurrió un error obteniendo la información del usuario",
       "ADD_MEMBER_SUCCESS": "El usuario se ha creado exitosamente",
       "ADD_MEMBER_ERROR": "Ocurrió un error al crear el usuario",
       "EDIT_MEMBER_SUCCESS": "El usuario se ha modificado exitosamente",
@@ -75,6 +76,7 @@
     },
     "MESSAGES": {
       "LIST_USERS_ERROR": "Ocurrió un error obteniendo la lista de usuarios",
+      "GET_USER_ERROR": "Ocurrió un error obteniendo la información del usuario",
       "EDIT_USER_SUCCESS": "El usuario se ha modificado exitosamente",
       "EDIT_USER_ERROR": "Ocurrió un error al modificar el usuario"
     }

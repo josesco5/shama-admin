@@ -101,6 +101,11 @@ angular
         templateUrl: 'views/users/list.html',
         controller: 'UsersListCtrl'
       })
+      .state('users.detail', {
+        url: '/:userId',
+        templateUrl: 'views/users/detail.html',
+        controller: 'UserDetailCtrl'
+      })
       .state('reports', {
         abstract: true,
         url: '/reports',

@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default form-container">
+      <div class="panel-heading" translate>
+        USERS.LABELS.BASIC_DATA
+      </div>
+      <div class="panel-body">
+        <div class="form-horizontal">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3" translate>USERS.LABELS.NAME</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.name }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3" translate>USERS.LABELS.LASTNAME</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.lastname }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3" translate>USERS.LABELS.GENDER</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.gender | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3" translate>USERS.LABELS.EMAIL</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static">{{ user.email }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="control-label col-sm-3" translate>COMMON.LABELS.STATUS</label>
+                <div class="col-sm-9">
+                  <p class="form-control-static" ng-show="user.enabled" translate>COMMON.LABELS.ENABLED</p>
+                  <p class="form-control-static" ng-show="!user.enabled" translate>COMMON.LABELS.DISABLED</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
