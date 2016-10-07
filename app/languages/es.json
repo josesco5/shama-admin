@@ -33,6 +33,7 @@
     "LABELS": {
       "HEADER": "Equipo",
       "ADD_MEMBER": "Agregar miembro al equipo",
+      "EDIT_MEMBER": "Editar miembro del equipo",
       "BASIC_DATA": "Información básica",
       "NAME": "Nombre",
       "LASTNAME": "Apellido",

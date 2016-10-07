@@ -35,7 +35,7 @@
       <div class="form-group">
         <label class="control-label col-sm-3" translate>TEAM.LABELS.IDENTITY_CARD</label>
         <div class="col-sm-9">
-          <input class="form-control" type="number" name="identityCard" ng-model="user.identityCard" required>
+          <input class="form-control" type="text" name="identityCard" ng-model="user.identityCard" required>
         </div>
       </div>
     </div>
@@ -58,7 +58,8 @@
       <div class="form-group">
         <label class="control-label col-sm-3" translate>TEAM.LABELS.EMAIL</label>
         <div class="col-sm-9">
-          <input class="form-control" type="email" name="email" ng-model="user.email" required>
+          <input class="form-control" type="email" name="email" ng-model="user.email" ng-hide="user._id" required>
+          <p class="form-control-static" ng-show="user._id">{{ user.email }}</p>
         </div>
       </div>
     </div>

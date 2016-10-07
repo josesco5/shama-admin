@@ -86,6 +86,11 @@ angular
         templateUrl: 'views/team/detail.html',
         controller: 'TeamDetailCtrl'
       })
+      .state('team.edit', {
+        url: '/:userId/edit',
+        templateUrl: 'views/team/edit.html',
+        controller: 'TeamEditCtrl'
+      })
       .state('users', {
         abstract: true,
         url: '/users',
