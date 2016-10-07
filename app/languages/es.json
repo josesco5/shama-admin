@@ -62,6 +62,24 @@
     }
   },
 
+  "USERS": {
+    "LABELS": {
+      "HEADER": "Usuarios",
+      "BASIC_DATA": "Información básica",
+      "NAME": "Nombre",
+      "LASTNAME": "Apellido",
+      "GENDER": "Sexo",
+      "IDENTITY_CARD": "C.I.",
+      "EMAIL": "Correo",
+      "COMMENTS": "Comentarios"
+    },
+    "MESSAGES": {
+      "LIST_USERS_ERROR": "Ocurrió un error obteniendo la lista de usuarios",
+      "EDIT_USER_SUCCESS": "El usuario se ha modificado exitosamente",
+      "EDIT_USER_ERROR": "Ocurrió un error al modificar el usuario"
+    }
+  },
+
   "male": "Masculino",
   "female": "Femenino",
   "supervisor": "Supervisor",
