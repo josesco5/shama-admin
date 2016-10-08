@@ -16,6 +16,10 @@ angular.module('shamaAdminApp')
       { id: 4, user: 'John Smith', body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...' }
     ];
 
+    $scope.verifyState = function(state) {
+      return $state.includes(state);
+    };
+
     $scope.logout = function () {
       auth.removeToken();
       $state.go('login');

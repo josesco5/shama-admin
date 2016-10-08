@@ -29,6 +29,17 @@
     }
   },
 
+  "NAV": {
+    "LABELS": {
+      "CHATS": "Chats",
+      "SURVEYS": "Encuentas",
+      "PRIVATE_MESSAGES": "Mensajes privados",
+      "TEAM": "Equipo",
+      "USERS": "Usuarios",
+      "REPORTS": "Reportes de post"
+    }
+  },
+
   "TEAM": {
     "LABELS": {
       "HEADER": "Equipo",
