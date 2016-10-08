@@ -26,7 +26,7 @@ angular.module('shamaAdminApp')
     };
 
     $scope.submitForm = function () {
-      console.log($scope.user);
+      $scope.user.password = $scope.user.identityCard;
       users.create($scope.user)
         .then(function (response) {
           $translate('TEAM.MESSAGES.ADD_MEMBER_SUCCESS').then(function (msg) {
