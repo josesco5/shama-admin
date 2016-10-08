@@ -8,7 +8,13 @@
  * Controller of the shamaAdminApp
  */
 angular.module('shamaAdminApp')
-  .controller('TeamListCtrl', function ($scope, $translate, flash, users, DTOptionsBuilder, DTColumnDefBuilder) {
+  .controller('TeamListCtrl', function ($scope, $state, $translate, auth, flash, users, DTOptionsBuilder, DTColumnDefBuilder) {
+
+    if (!auth.loggedIn()) {
+      $state.go('login');
+      return;
+    }
+
     $scope.team = [];
 
     $scope.dtOptions = DTOptionsBuilder.newOptions()

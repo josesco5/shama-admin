@@ -8,6 +8,12 @@
  * Controller of the shamaAdminApp
  */
 angular.module('shamaAdminApp')
-  .controller('SurveysListCtrl', function ($scope) {
+  .controller('SurveysListCtrl', function ($scope, $state, auth) {
+
+    if (!auth.loggedIn()) {
+      $state.go('login');
+      return;
+    }
+
     $scope.surveys = [];
   });

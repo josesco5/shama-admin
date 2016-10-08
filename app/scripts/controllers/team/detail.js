@@ -8,7 +8,13 @@
  * Controller of the shamaAdminApp
  */
 angular.module('shamaAdminApp')
-  .controller('TeamDetailCtrl', function ($scope, $state, $stateParams, $translate, flash, users) {
+  .controller('TeamDetailCtrl', function ($scope, $state, $stateParams, $translate, auth, flash, users) {
+
+    if (!auth.loggedIn()) {
+      $state.go('login');
+      return;
+    }
+
     $scope.user = {};
     users.get($stateParams.userId)
       .then(function (response) {

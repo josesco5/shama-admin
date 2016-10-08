@@ -8,7 +8,13 @@
  * Controller of the shamaAdminApp
  */
 angular.module('shamaAdminApp')
-  .controller('TeamCreateCtrl', function ($scope, $state, $translate, flash, users) {
+  .controller('TeamCreateCtrl', function ($scope, $state, $translate, auth, flash, users) {
+
+    if (!auth.loggedIn()) {
+      $state.go('login');
+      return;
+    }
+
     $scope.user = {
       enabled: false
     };
