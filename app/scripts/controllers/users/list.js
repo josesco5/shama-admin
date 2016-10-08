@@ -15,6 +15,14 @@ angular.module('shamaAdminApp')
       return;
     }
 
+    if (auth.getCurrentUser().role != 'admin') {
+      $translate('USERS.MESSAGES.UNAUTHORIZED_ACCESS').then(function (msg) {
+        flash.showError(msg);
+      });
+      $state.go('chats.list');
+      return;
+    }
+
     $scope.users = [];
 
     $scope.dtOptions = DTOptionsBuilder.newOptions()

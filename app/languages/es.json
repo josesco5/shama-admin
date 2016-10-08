@@ -86,6 +86,7 @@
       "COMMENTS": "Comentarios"
     },
     "MESSAGES": {
+      "UNAUTHORIZED_ACCESS": "No tienes permiso para acceder a la información de los usuarios",
       "LIST_USERS_ERROR": "Ocurrió un error obteniendo la lista de usuarios",
       "GET_USER_ERROR": "Ocurrió un error obteniendo la información del usuario",
       "EDIT_USER_SUCCESS": "El usuario se ha modificado exitosamente",
