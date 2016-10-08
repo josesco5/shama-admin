@@ -57,27 +57,27 @@
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
-                <li>
+                <li ng-if="hasAccess('chats')">
                     <a ui-sref="chats.list" ng-class="{ active: verifyState('chats') }">
                       <i class="fa fa-comments fa-fw"></i> <span translate>NAV.LABELS.CHATS</span></a>
                 </li>
-                <li>
+                <li ng-if="hasAccess('surveys')">
                     <a ui-sref="surveys.list" ng-class="{ active: verifyState('surveys') }">
                       <i class="fa fa-edit fa-fw"></i> <span translate>NAV.LABELS.SURVEYS</span></a>
                 </li>
-                <li>
+                <li ng-if="hasAccess('private-messages')">
                     <a ui-sref="private-messages.list" ng-class="{ active: verifyState('private-messages') }">
                       <i class="fa fa-envelope-o fa-fw"></i> <span translate>NAV.LABELS.PRIVATE_MESSAGES</span></a>
                 </li>
-                <li>
+                <li ng-if="hasAccess('team')">
                     <a ui-sref="team.list" ng-class="{ active: verifyState('team') }">
                       <i class="fa fa-user fa-fw"></i> <span translate>NAV.LABELS.TEAM</span></a>
                 </li>
-                <li>
+                <li ng-if="hasAccess('users')">
                     <a ui-sref="users.list" ng-class="{ active: verifyState('users') }">
                       <i class="fa fa-users fa-fw"></i> <span translate>NAV.LABELS.USERS</span></a>
                 </li>
-                <li>
+                <li ng-if="hasAccess('reports')">
                     <a ui-sref="reports.list" ng-class="{ active: verifyState('reports') }">
                       <i class="fa fa-exclamation-triangle fa-fw"></i> <span translate>NAV.LABELS.REPORTS</span></a>
                 </li>
