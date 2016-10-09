@@ -2,6 +2,7 @@
   "COMMON": {
     "LABELS": {
       "DATE": "Fecha",
+      "HOUR": "Hora",
       "STATUS": "Estatus",
       "ENABLED": "Habilitado",
       "DISABLED": "Deshabilitado"
@@ -37,6 +38,17 @@
       "TEAM": "Equipo",
       "USERS": "Usuarios",
       "REPORTS": "Reportes de post"
+    }
+  },
+
+  "CHATS": {
+    "LABELS": {
+      "HEADER": "Listado de Chats",
+      "TITLE": "Título",
+      "ASSIGNED_TO": "Facilitador"
+    },
+    "MESSAGES": {
+      "LIST_ITEMS_ERROR": "Ocurrió un error obteniendo la lista de chats"
     }
   },
 

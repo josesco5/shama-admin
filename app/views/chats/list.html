@@ -1,5 +1,51 @@
 <div class="row">
   <div class="col-lg-12">
-  <h1 class="page-header">Chats</h1>
+  <h1 class="page-header" translate="">CHATS.LABELS.HEADER</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table datatable="ng"
+               dt-options="dtOptions" dt-column-defs="dtColumnDefs"
+               class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th class="col-sm-4" translate>CHATS.LABELS.TITLE</th>
+              <th class="col-sm-2" translate>CHATS.LABELS.ASSIGNED_TO</th>
+              <th class="col-sm-3" translate>COMMON.LABELS.DATE</th>
+              <th class="col-sm-3" translate>COMMON.LABELS.HOUR</th>
+              <th class="col-sm-3" translate>COMMON.LABELS.ENABLED</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="chat in chats">
+              <td>
+                <a ui-sref="chats.detail({chatId: chat._id})">
+                  {{ chat.title }}
+                </a>
+              </td>
+              <td>{{ chat.assignedTo.name }} {{ chat.assignedTo.lastname }}</td>
+              <td>{{ chat.createdAt | date: "dd-MM-yyyy" }}</td>
+              <td>{{ chat.createdAt | date: "hh:mm" }}</td>
+              <td>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" ng-model="chat.enabled" ng-click="enable(chat._id, chat.enabled)">
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row list-buttons">
+          <div class="col-sm-12">
+            <a ui-sref="chats.create" class="btn btn-primary" translate>COMMON.BUTTONS.ADD</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
