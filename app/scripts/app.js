@@ -23,7 +23,8 @@ angular
     'restangular',
     'datatables',
     'datatables.bootstrap',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'ui.select'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
@@ -130,4 +131,7 @@ angular
     $translateProvider.preferredLanguage('es');
 
     $translateProvider.useSanitizeValueStrategy('escapeParameters');
+  })
+  .config(function (uiSelectConfig) {
+    uiSelectConfig.theme = 'bootstrap';
   });
