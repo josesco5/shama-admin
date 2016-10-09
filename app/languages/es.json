@@ -48,7 +48,9 @@
       "ASSIGNED_TO": "Facilitador"
     },
     "MESSAGES": {
-      "LIST_ITEMS_ERROR": "Ocurrió un error obteniendo la lista de chats"
+      "LIST_ITEMS_ERROR": "Ocurrió un error obteniendo la lista de chats",
+      "EDIT_CHAT_SUCCESS": "El chat se ha modificado exitosamente",
+      "EDIT_CHAT_ERROR": "Ocurrió un error al modificar el chat"
     }
   },
 

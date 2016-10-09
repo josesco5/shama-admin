@@ -30,6 +30,20 @@ angular.module('shamaAdminApp')
         DTColumnDefBuilder.newColumnDef(4).notSortable()
     ];
 
+    $scope.enable = function (chatId, enabled) {
+      chats.enable(chatId, enabled)
+        .then(function (response) {
+          $translate('CHATS.MESSAGES.EDIT_CHAT_SUCCESS').then(function (msg) {
+            flash.showSuccess(msg);
+          });
+        }, function (response) {
+          console.log('Error trying to enable/disable the chat, with status: ' + response.status);
+          $translate('CHATS.MESSAGES.EDIT_CHAT_ERROR').then(function (msg) {
+            flash.showError(msg);
+          });
+        });
+    };
+
     chats.all('public')
       .then(function (response) {
         $scope.chats = response.data;
