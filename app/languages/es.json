@@ -44,11 +44,19 @@
   "CHATS": {
     "LABELS": {
       "HEADER": "Listado de Chats",
+      "ADD_CHAT": "Crear un nuevo chat",
       "TITLE": "Título",
-      "ASSIGNED_TO": "Facilitador"
+      "ASSIGNED_TO": "Responsable",
+      "THEME": "Tema",
+      "COMMENTS": "Comentarios"
+    },
+    "VALUES": {
+      "SELECT_OPTION": "-- Elija una opción --"
     },
     "MESSAGES": {
       "LIST_ITEMS_ERROR": "Ocurrió un error obteniendo la lista de chats",
+      "ADD_CHAT_SUCCESS": "El chat se ha creado exitosamente",
+      "ADD_CHAT_ERROR": "Ocurrió un error al crear el chat",
       "EDIT_CHAT_SUCCESS": "El chat se ha modificado exitosamente",
       "EDIT_CHAT_ERROR": "Ocurrió un error al modificar el chat"
     }

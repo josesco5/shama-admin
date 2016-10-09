@@ -1,0 +1,67 @@
+<form role="form" class="form-horizontal" name="formHolder.chatForm" ng-submit="submitForm()" novalidate>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3" translate>CHATS.LABELS.TITLE</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" name="title" ng-model="chat.title" required>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3" translate>CHATS.LABELS.THEME</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" name="theme" ng-model="chat.theme" required>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3" translate>CHATS.LABELS.ASSIGNED_TO</label>
+        <div class="col-sm-9">
+          <ui-select ng-model="chat.assignedTo" required>
+            <ui-select-match placeholder="{{'CHATS.VALUES.SELECT_OPTION' | translate}}">
+              {{$select.selected.name}} {{$select.selected.lastname}}
+            </ui-select-match>
+            <ui-select-choices repeat="member._id as member in team | filter: $select.search">
+              <div ng-bind-html="member.name + ' ' + member.lastname | highlight: $select.search"></div>
+            </ui-select-choices>
+          </ui-select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3" translate>COMMON.LABELS.ENABLED</label>
+        <div class="col-sm-9">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="enabled" ng-model="chat.enabled">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label col-sm-3" translate>CHATS.LABELS.COMMENTS</label>
+        <div class="col-sm-9">
+          <textarea class="form-control" rows="4" name="comments" ng-model="chat.comments"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-9 col-sm-offset-3 col-md-2 col-md-offset-10">
+      <input class="btn btn-success btn-block" ng-disabled="!canSubmitForm()" type="submit" value="{{ 'COMMON.BUTTONS.SAVE' | translate }}">
+    </div>
+  </div>
+</form>

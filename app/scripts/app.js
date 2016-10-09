@@ -47,6 +47,11 @@ angular
         templateUrl: 'views/chats/list.html',
         controller: 'ChatsListCtrl'
       })
+      .state('chats.create', {
+        url: '/new',
+        templateUrl: 'views/chats/create.html',
+        controller: 'ChatCreateCtrl'
+      })
       .state('surveys', {
         abstract: true,
         url: '/surveys',

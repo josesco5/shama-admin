@@ -14,6 +14,13 @@ angular.module('shamaAdminApp')
       return ShamaRestangular.all('chats').getList(params, headers);
     };
 
+    chats.create = function (chat) {
+      var headers = {
+        authorization: auth.getToken()
+      };
+      return ShamaRestangular.all('chats').post(chat, null, headers);
+    };
+
     chats.enable = function (chatId, enabled) {
       var headers = {
         authorization: auth.getToken()
