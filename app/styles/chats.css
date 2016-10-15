@@ -1,0 +1,23 @@
+.chat-basic-info {
+  margin-top: 20px;
+}
+
+.messages-container,
+.comments-container {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages-list,
+.comments-list {
+  list-style: none;
+  padding-left: 0px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.message,
+.comment {
+  margin-bottom: 15px;
+}

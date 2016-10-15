@@ -1,0 +1,86 @@
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table table-bordered chat-basic-info">
+      <thead>
+        <tr class="active">
+          <th class="col-sm-4" translate>CHATS.LABELS.TITLE</th>
+          <th class="col-sm-2" translate>CHATS.LABELS.ASSIGNED_TO</th>
+          <th class="col-sm-2" translate>COMMON.LABELS.DATE</th>
+          <th class="col-sm-2" translate>CHATS.LABELS.INTERACTIONS</th>
+          <th class="col-sm-2" translate>COMMON.LABELS.STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ chat.title }}</td>
+          <td>{{ chat.assignedTo.name }} {{ chat.assignedTo.lastname }}</td>
+          <td>{{ chat.createdAt | date: "dd-MM-yyyy" }}</td>
+          <td>{{ messages.length }}</td>
+          <td>
+            <span ng-show="chat.enabled" translate>
+              COMMON.LABELS.ENABLED
+            </span>
+            <span ng-hide="chat.enabled" translate>
+              COMMON.LABELS.DISABLED
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-8">
+    <div class="panel panel-default form-container">
+      <div class="panel-heading" translate>
+        CHATS.LABELS.RECORD
+      </div>
+      <div class="panel-body messages-container">
+        <ul class=" container messages-list">
+          <li class="row comment" ng-repeat="message in messages">
+            <div class="col-sm-3">
+              <strong>{{ message.userId.name }} {{ message.userId.lastname }}</strong>
+            </div>
+            <div class="col-sm-9">
+              <div>{{ message.body }}</div>
+            </div>
+          </li>
+        </ul>
+        <form class="message-form">
+          <div class="form-group">
+            <textarea class="form-control" rows="2" name="message" ng-model="message"></textarea>
+          </div>
+          <div class="form-group">
+            <input class="btn btn-success pull-right" ng-disabled="!canSubmitForm()" type="submit" value="{{ 'CHATS.BUTTONS.SEND' | translate }}">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="panel panel-default form-container">
+      <div class="panel-heading" translate>
+        CHATS.LABELS.COMMENTS
+      </div>
+      <div class="panel-body comments-container">
+        <ul class="comments-list">
+          <li class="comment" ng-repeat="comment in comments">
+            <div>
+              <strong>{{ comment.userId.name }} {{ comment.userId.lastname }}</strong>
+            </div>
+            <div>{{ comment.body }}</div>
+          </li>
+        </ul>
+        <form class="message-form">
+          <div class="form-group">
+            <textarea class="form-control" rows="2" name="comment" ng-model="comment"></textarea>
+          </div>
+          <div class="form-group">
+            <input class="btn btn-success pull-right" ng-disabled="!canSubmitForm()" type="submit" value="{{ 'CHATS.BUTTONS.SEND' | translate }}">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

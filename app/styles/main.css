@@ -9,6 +9,10 @@ body {
   padding: 0;
 }
 
+.container {
+  width: 100%;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

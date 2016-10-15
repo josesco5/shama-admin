@@ -52,6 +52,11 @@ angular
         templateUrl: 'views/chats/create.html',
         controller: 'ChatCreateCtrl'
       })
+      .state('chats.detail', {
+        url: '/:chatId',
+        templateUrl: 'views/chats/detail.html',
+        controller: 'ChatDetailCtrl'
+      })
       .state('surveys', {
         abstract: true,
         url: '/surveys',
