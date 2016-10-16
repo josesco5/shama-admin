@@ -66,7 +66,9 @@
       "GET_CHAT_MESSAGES_ERROR": "Ocurrió un error obteniendo los mensajes del chat",
       "GET_CHAT_COMMENTS_ERROR": "Ocurrió un error obteniendo los comentarios del chat",
       "EDIT_CHAT_SUCCESS": "El chat se ha modificado exitosamente",
-      "EDIT_CHAT_ERROR": "Ocurrió un error al modificar el chat"
+      "EDIT_CHAT_ERROR": "Ocurrió un error al modificar el chat",
+      "SEND_MESSAGE_ERROR": "Ocurrió un error al enviar el mensaje",
+      "SEND_COMMENT_ERROR": "Ocurrió un error al enviar el comentario"
     }
   },
 

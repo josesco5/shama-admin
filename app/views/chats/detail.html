@@ -37,7 +37,7 @@
         CHATS.LABELS.RECORD
       </div>
       <div class="panel-body messages-container">
-        <ul class=" container messages-list">
+        <ul id="messagesList" class=" container messages-list">
           <li class="row comment" ng-repeat="message in messages">
             <div class="col-sm-3">
               <strong>{{ message.userId.name }} {{ message.userId.lastname }}</strong>
@@ -47,12 +47,16 @@
             </div>
           </li>
         </ul>
-        <form class="message-form">
+        <form role="form" name="messageForm"
+              class="message-form" ng-submit="sendMessage()"
+              novalidate>
           <div class="form-group">
-            <textarea class="form-control" rows="2" name="message" ng-model="message"></textarea>
+            <textarea class="form-control" rows="2" name="message" ng-model="message.body" required></textarea>
           </div>
           <div class="form-group">
-            <input class="btn btn-success pull-right" ng-disabled="!canSubmitForm()" type="submit" value="{{ 'CHATS.BUTTONS.SEND' | translate }}">
+            <input class="btn btn-success pull-right"
+                   ng-disabled="!canSendMessage()" type="submit"
+                   value="{{ 'CHATS.BUTTONS.SEND' | translate }}">
           </div>
         </form>
       </div>
@@ -64,7 +68,7 @@
         CHATS.LABELS.COMMENTS
       </div>
       <div class="panel-body comments-container">
-        <ul class="comments-list">
+        <ul id="commentsList" class="comments-list">
           <li class="comment" ng-repeat="comment in comments">
             <div>
               <strong>{{ comment.userId.name }} {{ comment.userId.lastname }}</strong>
@@ -72,12 +76,16 @@
             <div>{{ comment.body }}</div>
           </li>
         </ul>
-        <form class="message-form">
+        <form role="form" name="commentForm"
+              class="message-form" ng-submit="sendComment()"
+              novalidate>
           <div class="form-group">
-            <textarea class="form-control" rows="2" name="comment" ng-model="comment"></textarea>
+            <textarea class="form-control" rows="2" name="comment" ng-model="comment.body" required></textarea>
           </div>
           <div class="form-group">
-            <input class="btn btn-success pull-right" ng-disabled="!canSubmitForm()" type="submit" value="{{ 'CHATS.BUTTONS.SEND' | translate }}">
+            <input class="btn btn-success pull-right"
+                   ng-disabled="!canSendComment()" type="submit"
+                   value="{{ 'CHATS.BUTTONS.SEND' | translate }}">
           </div>
         </form>
       </div>

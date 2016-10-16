@@ -38,11 +38,25 @@ angular.module('shamaAdminApp')
       return ShamaRestangular.one('chats', chatId).post('enable', payload, null, headers);
     };
 
+    chats.sendMessage = function (message) {
+      var headers = {
+        authorization: auth.getToken()
+      };
+      return ShamaRestangular.all('messages').post(message, null, headers);
+    };
+
     chats.getMessages = function (chatId) {
       var headers = {
         authorization: auth.getToken()
       };
       return ShamaRestangular.one('chats', chatId).customGET('messages',null, headers);
+    };
+
+    chats.sendComment = function (comment) {
+      var headers = {
+        authorization: auth.getToken()
+      };
+      return ShamaRestangular.all('comments').post(comment, null, headers);
     };
 
     chats.getComments = function (chatId) {
