@@ -41,6 +41,12 @@ angular.module('shamaAdminApp')
         });
     });
 
+    websocket.onComment(function (comment) {
+      $scope.comments.push(comment);
+      // Scroll to the list's bottom
+      $('#commentsList').animate({ scrollTop: $('#commentsList').prop("scrollHeight") }, 1000);
+    });
+
     $scope.canSendMessage = function() {
       return $scope.messageForm.$valid;
     };
@@ -56,19 +62,9 @@ angular.module('shamaAdminApp')
     };
 
     $scope.sendComment = function() {
-      chats.sendComment($scope.comment)
-        .then(function (response) {
-          var comment = angular.copy($scope.comment);
-          comment.userId = auth.getCurrentUser();
-          $scope.comments.push(comment);
-          $scope.comment.body = '';
-          // Scroll to the list's bottom
-          $('#commentsList').animate({ scrollTop: $('#commentsList').prop("scrollHeight") }, 1000);
-        }, function (response) {
-          $translate('CHATS.MESSAGES.SEND_COMMENT_ERROR').then(function (msg) {
-            flash.showError(msg);
-          });
-        });
+      var comment = angular.copy($scope.comment);
+      websocket.sendComment(comment);
+      $scope.comment.body = '';
     };
 
     chats.get($stateParams.chatId)

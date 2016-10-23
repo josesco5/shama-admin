@@ -5,7 +5,7 @@ angular.module('shamaAdminApp')
     // Initializing socket
     $window.socket = io('http://localhost:3000');
     var ws = {};
-    var onMessage;
+    var onMessage, onComment;
 
     ws.joinChat = function (chatId) {
       $window.socket.emit('join chat', chatId);
@@ -13,6 +13,10 @@ angular.module('shamaAdminApp')
 
     ws.sendMessage = function (message) {
       $window.socket.emit('message', message);
+    };
+
+    ws.sendComment = function (comment) {
+      $window.socket.emit('comment', comment);
     };
 
     ws.on = function (eventName, callback) {
@@ -28,11 +32,22 @@ angular.module('shamaAdminApp')
       onMessage = callback;
     };
 
+    ws.onComment = function (callback) {
+      onComment = callback;
+    };
+
     ws.on('message', function (message) {
       if (onMessage) {
         onMessage(message);
       }
     });
+
+    ws.on('comment', function (comment) {
+      if (onComment) {
+        onComment(comment);
+      }
+    });
+
 
     return ws;
   });
