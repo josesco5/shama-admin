@@ -8,7 +8,7 @@
  * Controller of the shamaAdminApp
  */
 angular.module('shamaAdminApp')
-  .controller('ChatDetailCtrl', function ($scope, $state, $stateParams, $translate, auth, flash, chats) {
+  .controller('ChatDetailCtrl', function ($scope, $state, $stateParams, $translate, auth, flash, chats, users, websocket) {
 
     if (!auth.loggedIn()) {
       $state.go('login');
@@ -29,6 +29,18 @@ angular.module('shamaAdminApp')
       userId: auth.getCurrentUser().id
     };
 
+    websocket.joinChat($stateParams.chatId);
+
+    websocket.onMessage(function (message) {
+      // ToDo: Display sender's info only to admin user
+      users.get(message.userId)
+        .then(function(response) {
+          message.userId = response.data;
+          $scope.messages.push(message);
+          $('#messagesList').animate({ scrollTop: $('#messagesList').prop("scrollHeight") }, 1000);
+        });
+    });
+
     $scope.canSendMessage = function() {
       return $scope.messageForm.$valid;
     };
@@ -38,19 +50,9 @@ angular.module('shamaAdminApp')
     };
 
     $scope.sendMessage = function() {
-      chats.sendMessage($scope.message)
-        .then(function (response) {
-          var message = angular.copy($scope.message);
-          message.userId = auth.getCurrentUser();
-          $scope.messages.push(message);
-          $scope.message.body = '';
-          // Scroll to the list's bottom
-          $('#messagesList').animate({ scrollTop: $('#messagesList').prop("scrollHeight") }, 1000);
-        }, function (response) {
-          $translate('CHATS.MESSAGES.SEND_MESSAGE_ERROR').then(function (msg) {
-            flash.showError(msg);
-          });
-        });
+      var message = angular.copy($scope.message);
+      websocket.sendMessage(message);
+      $scope.message.body = '';
     };
 
     $scope.sendComment = function() {
